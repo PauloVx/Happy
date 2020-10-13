@@ -1,7 +1,11 @@
 import express from 'express';
 import { APP_PORT } from './config'
 
+import './database/connection';
+
 const app = express();
+
+app.use(express.json());
 
 app.get('/', (request, response) => {
   return response.json({
