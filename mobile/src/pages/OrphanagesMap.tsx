@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Text, View, TouchableOpacity } from 'react-native';
 import MapView, { PROVIDER_GOOGLE, Marker, Callout } from 'react-native-maps';
+import { useNavigation } from '@react-navigation/native';
 
 import { styles } from '../styles/orphanagesMap';
 
@@ -10,6 +11,11 @@ import mapMarker from '../images/map-marker.png';
 
 
 export function OrphanagesMap() {
+  const navigation = useNavigation();
+
+  function handleNavigateToOrphanageDetails() {
+    navigation.navigate('OrphanageDetails');
+  }
 
   return (
     <View style={styles.container}>
@@ -34,7 +40,7 @@ export function OrphanagesMap() {
             longitude: -43.2652029
           }}
         >
-          <Callout tooltip onPress={() => {alert('PLACEHOLDER')}}>
+          <Callout tooltip onPress={handleNavigateToOrphanageDetails}>
             <View style={styles.calloutContainer}>
               <Text style={styles.calloutText}>Orph Name</Text>
             </View>
