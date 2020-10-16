@@ -87,7 +87,7 @@ export function OrphanageDetails() {
             ) : (
               <View style={[styles.scheduleItem, styles.scheduleItemRed]}>
                 <Feather name="info" size={40} color="#FF669D" />
-                <Text style={[styles.scheduleText, styles.scheduleText]}>Não atendemos fim de semana</Text>
+                <Text style={[styles.scheduleText, styles.scheduleTextRed]}>Não atendemos fim de semana</Text>
               </View>
             )
           }

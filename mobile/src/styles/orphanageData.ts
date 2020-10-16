@@ -50,6 +50,18 @@ export const styles = StyleSheet.create({
     marginBottom: 32,
   },
 
+  uploadedImagesContainer: {
+    flexDirection: 'row'
+  },
+
+  uploadedImage: {
+    width: 64,
+    height: 64,
+    borderRadius: 20,
+    marginBottom: 32,
+    marginRight: 8
+  },
+
   switchContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -71,4 +83,4 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     color: '#FFF',
   }
-})
+});
