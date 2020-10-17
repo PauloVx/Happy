@@ -3,6 +3,7 @@ import { Image } from './Image';
 export interface Orphanage {
   id: number,
   name: string,
+  whatsapp: string,
   latitude: number,
   longitude: number,
   about: string,

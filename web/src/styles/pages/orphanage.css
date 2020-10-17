@@ -146,8 +146,9 @@
   color: #FF669D;
 }
 
-.orphanage-details .orphanage-details-content button.contact-button {
+.orphanage-details .orphanage-details-content .contact-button {
   margin-top: 64px;
+  text-decoration: none;
 
   width: 100%;
   height: 64px;
@@ -165,10 +166,10 @@
   transition: background-color 0.2s;
 }
 
-.orphanage-details .orphanage-details-content button.contact-button svg {
+.orphanage-details .orphanage-details-content .contact-button svg {
   margin-right: 16px;
 }
 
-.orphanage-details .orphanage-details-content button.contact-button:hover {
+.orphanage-details .orphanage-details-content .contact-button:hover {
   background: #36CF82;
 }
