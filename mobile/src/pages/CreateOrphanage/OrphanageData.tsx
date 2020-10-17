@@ -20,6 +20,7 @@ export function OrphanageData() {
   const { latitude, longitude } = params.position;
 
   const [name, setName] = useState('');
+  const [whatsapp, setWhatsapp] = useState('');
   const [about, setAbout] = useState('');
   const [instructions, setInstructions] = useState('');
   const [opening_hours, setOpeningHours] = useState('');
@@ -29,6 +30,7 @@ export function OrphanageData() {
   async function handleSubmit() {
     const data = new FormData();
     data.append('name', name);
+    data.append('whatsapp', whatsapp);
     data.append('about', about);
     data.append('latitude', String(latitude));
     data.append('longitude', String(longitude));
@@ -87,8 +89,10 @@ export function OrphanageData() {
         onChangeText={text => setAbout(text)}
       />
 
-      <Text style={styles.label}>Fotos</Text>
+      <Text style={styles.label}>Whatsapp</Text>
+      <TextInput style={styles.input} keyboardType="phone-pad" onChangeText={text => setWhatsapp(text)}/>
 
+      <Text style={styles.label}>Fotos</Text>
       <View style={styles.uploadedImagesContainer}>
         {
           images.map(img => {
@@ -98,7 +102,6 @@ export function OrphanageData() {
           })
         }
       </View>
-
       <TouchableOpacity style={styles.imagesInput} onPress={handleImageSelection}>
         <Feather name="plus" size={24} color="#15B6D6" />
       </TouchableOpacity>
