@@ -19,7 +19,7 @@ class OrphanagesController {
   }
 
   async create(request: Request, response: Response) {
-    const { name, latitude, longitude, about, instructions, opening_hours, open_on_weekends } = request.body;
+    const { name, whatsapp, latitude, longitude, about, instructions, opening_hours, open_on_weekends } = request.body;
     const requestImages = request.files as Array<Express.Multer.File>;
 
     const images = requestImages.map(image => {
@@ -30,6 +30,7 @@ class OrphanagesController {
 
     const data = {
       name,
+      whatsapp,
       latitude,
       longitude,
       about,
@@ -41,6 +42,7 @@ class OrphanagesController {
 
     const schema = Yup.object().shape({
       name: Yup.string().required(),
+      whatsapp: Yup.string().required(),
       latitude: Yup.number().required(),
       longitude: Yup.number().required(),
       about: Yup.string().required().max(300),
