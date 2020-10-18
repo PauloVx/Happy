@@ -1,0 +1,240 @@
+.page-login {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #FFF;
+}
+
+.page-login .content-wrapper {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+
+  width: 100%;
+  height: 100%;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-login .content-wrapper .logo {
+  background: linear-gradient(329.54deg, #29B6D1 0%, #00C7C7 100%);
+
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+}
+
+.page-login .content-wrapper .logo .location-text {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 24px;
+  line-height: 34px;
+  text-align: center;
+
+  padding-top: 70px;
+}
+
+.page-login .content-wrapper .login-form-area {
+  position: relative;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-login .content-wrapper .login-form-area .back-button {
+  position: absolute;
+  background: #EBF2F5;
+
+  width: 48px;
+  height: 48px;
+
+  top: 40px;
+  right: 43px;
+
+  border-radius: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 0.4s;
+}
+
+.page-login .content-wrapper .login-form-area .back-button:hover {
+  background: #CDE;
+}
+
+.page-login .content-wrapper .login-form-area .form {
+  width: 80%;
+  height: 80%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border: 1px solid red;
+}
+
+.page-login .content-wrapper .login-form-area .form .login-text-container {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-login .content-wrapper .login-form-area .form .login-text-container .login-text {
+  font-size: 64px;
+  font-weight: bold;
+  color: #5C8599;
+}
+
+.page-login .content-wrapper .login-form-area .form form.login-form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  height: 70%;
+
+  align-items: center;
+
+  border: 1px solid red;
+}
+
+.page-login .content-wrapper .login-form-area .form form.login-form label {
+  position: absolute;
+  color: #8FA7B2
+}
+
+.page-login .content-wrapper .login-form-area .form form.login-form label.email-label {
+  left: 83px;
+  top: 15px;
+}
+
+.page-login .content-wrapper .login-form-area .form form.login-form label.password-label {
+  left: 83px;
+  top: 125px;
+}
+
+.page-login .content-wrapper .login-form-area .form form.login-form input {
+  background: #F5F8FA;
+  border: 1px solid #D3E2E5;
+  border-radius: 15px;
+  color: #5C8599;
+
+  margin-top: 46px;
+
+  width: 100%;
+  max-width: 450px;
+  height: 64px;
+
+  outline: none;
+
+  padding: 20px;
+}
+
+.page-login .content-wrapper .login-form-area .form form.login-form button.login-submit {
+  width: 100%;
+  max-width: 450px;
+  height: 64px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+
+  color: #FFF;
+  font-weight: bold;
+  background: #37C77F;
+  background: #37C77F;
+
+  transition: opacity 0.4s;
+}
+
+.page-login .content-wrapper .login-form-area .form form.login-form button.login-submit:hover {
+  opacity: 0.5;
+  outline: none;
+}
+
+.page-login .content-wrapper .login-form-area .form form.login-form .forgot-password-area {
+  display: flex;
+  width: 100%;
+
+  margin: 15px;
+  color: #8FA7B2;
+
+  justify-content: space-around;
+  align-items: center;
+
+  border: 1px solid red;
+}
+
+.page-login .content-wrapper .login-form-area .form form.login-form .forgot-password-area label {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+}
+
+.page-login .content-wrapper .login-form-area .form form.login-form .forgot-password-area .forgot-password-button {
+  text-decoration: none;
+  color: #8FA7B2;
+}
+
+/* ===========Checkbox============
+
+.page-login .content-wrapper .login-form-area .form form.login-form .forgot-password-area input[type=checkbox] + label {
+  display: block;
+  margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+.page-login .content-wrapper .login-form-area .form form.login-form .forgot-password-area input[type=checkbox] {
+  display: none;
+}
+
+.page-login .content-wrapper .login-form-area .form form.login-form .forgot-password-area input[type=checkbox] + label:before {
+  content: "\2714";
+  border: 0.1em solid #5C8599;
+  border-radius: 8px;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+  margin-right: 0.2em;
+  vertical-align: bottom;
+  color: transparent;
+  transition: .2s;
+}
+
+.page-login .content-wrapper .login-form-area .form form.login-form .forgot-password-area input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
+
+.page-login .content-wrapper .login-form-area .form form.login-form .forgot-password-area input[type=checkbox]:checked + label:before {
+  background-color: MediumSeaGreen;
+  border-color: MediumSeaGreen;
+  color: #fff;
+}
+
+.page-login .content-wrapper .login-form-area .form form.login-form .forgot-password-area input[type=checkbox]:disabled + label:before {
+  transform: scale(1);
+  border-color: #aaa;
+}
+
+.page-login .content-wrapper .login-form-area .form form.login-form .forgot-password-area input[type=checkbox]:checked:disabled + label:before {
+  transform: scale(1);
+  background-color: #bfb;
+  border-color: #bfb;
+} */

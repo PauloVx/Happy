@@ -25,6 +25,10 @@ export function Landing() {
           <strong>Rio de janeiro</strong>
           <span>RJ</span>
         </div>
+        
+        <Link to="/login" className="restricted-access">
+          Acesso restrito
+        </Link>
 
         <Link to="/app" className="enter-app">
           <FiArrowRight size={ 26 } color="rgba(0, 0, 0, 0.6)" />
